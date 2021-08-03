@@ -5,6 +5,7 @@ class ReachBar extends StatelessWidget {
     return Card(
       elevation: 3,
       child: Container(
+        color: Colors.transparent,
         height: 50,
         child: Row(
           children: [
@@ -32,7 +33,6 @@ class ReachBar extends StatelessWidget {
               child: Text('55 comment',style:
               TextStyle(
                 fontWeight: FontWeight.w500,
-
               ),),
             ),
           ],

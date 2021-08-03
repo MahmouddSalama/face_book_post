@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 class ReactBar extends StatelessWidget {
   Widget buildReactRow({required String image, required String name,required Function x}) {
     return InkWell(
+
       onTap: ()=>x(),
       child: Container(
+        color: Colors.transparent,
         child: Row(
           children: [
             Image.asset(

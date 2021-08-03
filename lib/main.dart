@@ -4,6 +4,8 @@ import 'package:task1/image_post.dart';
 import 'package:task1/reach_bar.dart';
 import 'package:task1/react_bar.dart';
 
+import 'post.dart';
+
 main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -14,19 +16,13 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: HomeAppBar(),
-        body: SingleChildScrollView(
-          child: Container(
-            child: Column(
-              children: [
-                HeaderPost(),
-                ImagePost(),
-                ReachBar(),
-                ReactBar(),
-              ],
-            ),
+        body: ListView.builder(
+            itemBuilder: (context,index){
+              return Post();
+            },
+            itemCount: 10,
           ),
         ),
-      ),
     );
   }
 }
